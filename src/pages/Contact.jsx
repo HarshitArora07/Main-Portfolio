@@ -73,7 +73,7 @@ export default function Contact() {
   whileInView={{ opacity: 1, scale: 1 }}
   viewport={{ once: true }}
   transition={{ duration: 0.4, ease: "easeOut" }}
-  className="font-bold mb-10"
+  className="font-bold mb-6"
 >
   {/* First line */}
   <span

@@ -48,16 +48,17 @@ export default function Home() {
           {/* LEFT IMAGE */}
           <div className="flex justify-center items-center flex-shrink-0 animate-zoomIn md:-mr-6 lg:-mr-10">
             <img
-              src={heroImg}
-              alt="Harshit"
-              className="w-full max-w-[180px] sm:max-w-[240px] md:max-w-[320px] lg:max-w-[380px] h-auto object-contain transition-all duration-500 [mask-image:linear-gradient(to_top,transparent_5%,black_60%)] [-webkit-mask-image:linear-gradient(to_top,transparent_5%,black_60%)]"
-            />
+  src={heroImg}
+  alt="Harshit"
+  className="w-full max-w-[120px] xs:max-w-[140px] sm:max-w-[180px] md:max-w-[320px] lg:max-w-[380px] h-auto object-contain transition-all duration-500 [mask-image:linear-gradient(to_top,transparent_5%,black_60%)] [-webkit-mask-image:linear-gradient(to_top,transparent_5%,black_60%)]"
+/>
+
           </div>
 
           {/* RIGHT CONTENT */}
           <div className="flex flex-col justify-center items-start text-left space-y-2 sm:space-y-3 flex-1 min-w-0">
             <p
-              className="text-base sm:text-lg text-[#BFD4E6] font-playfair italic tracking-wide font-bold animate-slideInUp"
+              className="text-base sm:text-lg text-[#BFD4E6] font-playfair italic tracking-wide font-bold animate-slideInUp md:-mb-2"
               style={{ animationDelay: "0.2s" }}
             >
               Hello I’m
@@ -65,27 +66,29 @@ export default function Home() {
 
             {/* NAME - force single line */}
             <h1
-              className="text-[1.2rem] xs:text-[1.4rem] sm:text-2xl md:text-[clamp(2.2rem,4.5vw,3rem)] lg:text-5xl font-playfair leading-tight whitespace-nowrap text-center md:text-left animate-slideInUp"
-              style={{
-                animationDelay: "0.4s",
-                color: "#EAF4FF",
-                textShadow: "0 0 6px #47C5E5, 0 0 6px #47C5E5, 0 0 6px #47C5E5",
-              }}
-            >
-              HARSHIT ARORA
-            </h1>
+  className="text-[clamp(1.2rem,5vw,3rem)] font-playfair leading-tight text-center md:text-left animate-slideInUp"
+  style={{
+    animationDelay: "0.4s",
+    color: "#EAF4FF",
+    textShadow: "0 0 6px #47C5E5, 0 0 6px #47C5E5, 0 0 6px #47C5E5",
+  }}
+>
+  HARSHIT ARORA
+</h1>
+
 
             {/* TITLE - move typing to next line on mobile */}
             <h2
-              className="text-xs sm:text-sm md:text-xl font-playfair italic animate-slideInUp"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <span className="whitespace-nowrap">And I’m a{" "}</span>
-              <span className="text-[#47C5E5] font-orbitron not-italic font-bold block sm:inline sm:whitespace-nowrap">
-                {text}
-                <span className="border-r-2 border-[#47C5E5] animate-blink ml-1"></span>
-              </span>
-            </h2>
+  className="text-[clamp(0.8rem,3vw,1.25rem)] font-playfair italic animate-slideInUp whitespace-nowrap overflow-hidden"
+  style={{ animationDelay: "0.6s" }}
+>
+  <span className="whitespace-nowrap">And I’m a </span>
+  <span className="text-[#47C5E5] font-orbitron not-italic font-bold">
+    {text}
+    <span className="border-r-2 border-[#47C5E5] animate-blink ml-1"></span>
+  </span>
+</h2>
+
 
             <p
               className="text-[#BFD4E6] text-xs sm:text-sm md:text-base leading-relaxed max-w-full md:max-w-[520px] text-justify py-2 sm:py-4 animate-slideInUp"
@@ -101,26 +104,30 @@ export default function Home() {
               className="flex gap-x-2 sm:gap-x-3 md:gap-x-4 mt-2 animate-slideInUp"
               style={{ animationDelay: "1s" }}
             >
-              <button
-                className="bg-[#3DB4D7] text-[#12325B] px-3 sm:px-6 md:px-8 py-1.5 sm:py-2.5 tracking-wide hover:opacity-90 transition text-xs sm:text-sm md:text-base whitespace-nowrap"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
-              >
-                HIRE ME
-              </button>
-              <ScrollLink
-                to="contact"
-                smooth={true}
-                duration={600}
-                offset={-80}
-                className="border-2 border-[#3DB4D7] px-3 sm:px-6 md:px-8 py-1.5 sm:py-2.5 tracking-wide hover:bg-[#3DB4D7] hover:text-[#12325B] transition text-xs sm:text-sm md:text-base whitespace-nowrap"
-                style={{ fontFamily: "Montserrat", cursor: "pointer" }}
-              >
-                Contact me
-              </ScrollLink>
+              {/* HIRE ME BUTTON */}
+<button
+  className="bg-[#3DB4D7] text-[#12325B] px-3 sm:px-6 md:px-8 py-1.5 sm:py-2.5 tracking-wide hover:opacity-90 transition text-xs sm:text-sm md:text-base whitespace-nowrap
+              font-Montserrat cursor-pointer
+             border-2 border-transparent
+             hover:border-[#eac160] hover:shadow-[0_0_8px_#6b592f,0_0_14px_#6b592f,0_0_20px_#6b592f]"
+>
+  HIRE ME
+</button>
+
+{/* CONTACT ME BUTTON */}
+<ScrollLink
+  to="contact"
+  smooth={true}
+  duration={600}
+  offset={-80}
+  className="border-2 border-[#3DB4D7] px-3 sm:px-6 md:px-8 py-1.5 sm:py-2.5 tracking-wide hover:bg-[#3DB4D7] hover:text-[#12325B] transition text-xs sm:text-sm md:text-base whitespace-nowrap
+             font-Montserrat cursor-pointer
+             hover:border-[#eac160] hover:shadow-[0_0_8px_#6b592f,0_0_14px_#6b592f,0_0_20px_#6b592f]"
+>
+  CONTACT ME
+</ScrollLink>
+
+
             </div>
           </div>
         </div>
