@@ -64,20 +64,46 @@ export default function Contact() {
 
   return (
     <section className="text-[#EAF4FF] flex justify-center px-6 md:px-20 py-10">
-      <div className="max-w-[1000px] w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+      <div className="max-w-[1100px] w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
         {/* LEFT COLUMN */}
         <div className="flex flex-col justify-center space-y-6 text-left md:text-left">
           <motion.h2
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="font-bold mb-10"
-          >
-            <span className="font-montserrat text-white text-3xl md:text-4xl">Have an Idea?</span> <br />
-            <span className="font-orbitron text-[#47C5E5] text-4xl md:text-5xl">Let’s Connect !!!</span>
-          </motion.h2>
+  initial={{ opacity: 0, scale: 0.5 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.4, ease: "easeOut" }}
+  className="font-bold mb-10"
+>
+  {/* First line */}
+  <span
+    className="
+      block
+      font-montserrat
+      text-white
+      text-[clamp(1.25rem,4vw,2.5rem)]
+      break-words
+      md:whitespace-nowrap
+    "
+  >
+    Have an Idea?
+  </span>
+
+  {/* Second line */}
+  <span
+    className="
+      block
+      font-orbitron
+      text-[#47C5E5]
+      text-[clamp(1.5rem,5vw,3rem)]
+      break-words
+      md:whitespace-nowrap
+    "
+  >
+    Let’s Connect ! ! !
+  </span>
+</motion.h2>
+
 
           <motion.div
             className="flex flex-col gap-5"

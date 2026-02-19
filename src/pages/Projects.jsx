@@ -26,7 +26,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className=" text-[#EAF4FF] py-12 md:py-3 flex flex-col items-center px-4 md:px-10">
+    <section className=" text-[#EAF4FF] py-4 md:py-3 flex flex-col items-center px-4 md:px-10">
       {/* ===== Heading ===== */}
       <motion.h2
         className="text-2xl font-orbitron sm:text-3xl md:text-4xl font-bold text-[#47C5E5] mb-2 md:mb-2 text-center"

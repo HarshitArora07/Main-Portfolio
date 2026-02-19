@@ -107,16 +107,17 @@ export default function Skills() {
                 className="bg-[#E6E6E6] text-[#12325B] p-6 md:p-8 rounded-3xl flex flex-col shadow-lg border border-transparent"
               >
                 <h3 className="text-2xl font-semibold mb-6">{section.title}</h3>
-                <div className={`grid ${section.cols} gap-4`}>
-                  {section.items.map((item, index) => (
-                    <span
-                      key={index}
-                      className="bg-white py-2 px-5 rounded-full text-center text-xs sm:text-sm font-medium flex items-center justify-center w-full"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
+                <div className={`grid ${section.cols} gap-2 sm:gap-4`}>
+  {section.items.map((item, index) => (
+    <span
+      key={index}
+      className="bg-white py-1.5 sm:py-2 px-3 sm:px-5 rounded-full text-center text-[10px] sm:text-xs md:text-sm font-medium flex items-center justify-center w-full break-words"
+    >
+      {item}
+    </span>
+  ))}
+</div>
+
               </motion.div>
             ))}
           </motion.div>
