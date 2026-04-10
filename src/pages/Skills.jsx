@@ -56,13 +56,13 @@ export default function Skills() {
       };
 
   return (
-    <section className="min-h-screen text-[#EAF4FF] flex items-center overflow-x-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 w-full py-16 flex flex-col gap-16">
+    <section className="text-[#EAF4FF] overflow-x-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-10 w-full py-8 md:py-16 flex flex-col gap-8 md:gap-16">
 
         {/* ================= TECH STACK ================= */}
         <div>
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-[#47C5E5] mb-10 font-orbitron text-center"
+            className="text-2xl md:text-4xl font-bold text-[#47C5E5] mb-5 md:mb-10 font-orbitron text-center"
             initial={{ opacity: 0, scale: 0.4 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function Skills() {
           </motion.h2>
 
           <motion.div
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -104,9 +104,9 @@ export default function Skills() {
                 key={i}
                 variants={cardVariants}
                 whileHover={hoverEffect}
-                className="bg-[#E6E6E6] text-[#12325B] p-6 md:p-8 rounded-3xl flex flex-col shadow-lg border border-transparent"
+                className="bg-[#E6E6E6] text-[#12325B] p-4 md:p-8 rounded-2xl md:rounded-3xl flex flex-col shadow-lg border border-transparent"
               >
-                <h3 className="text-2xl font-semibold mb-6">{section.title}</h3>
+                <h3 className="text-base md:text-2xl font-semibold mb-3 md:mb-6">{section.title}</h3>
                 <div className={`grid ${section.cols} gap-2 sm:gap-4`}>
   {section.items.map((item, index) => (
     <span
@@ -126,7 +126,7 @@ export default function Skills() {
         {/* ================= CERTIFICATIONS ================= */}
         <div>
           <motion.h2
-            className="text-3xl md:text-4xl font-orbitron font-bold text-[#47C5E5] mb-10 text-center"
+            className="text-2xl md:text-4xl font-orbitron font-bold text-[#47C5E5] mb-5 md:mb-10 text-center"
             initial={{ opacity: 0, scale: 0.4 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

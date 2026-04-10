@@ -63,11 +63,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="text-[#EAF4FF] flex justify-center px-6 md:px-20 py-10">
-      <div className="max-w-[1100px] w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+    <section className="text-[#EAF4FF] flex justify-center px-4 md:px-20 pt-4 md:pt-8 pb-8 md:pb-12">
+      <div className="max-w-[1100px] w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
 
         {/* LEFT COLUMN */}
-        <div className="flex flex-col justify-center space-y-6 text-left md:text-left">
+        <div className="flex flex-col justify-center space-y-4 md:space-y-6 text-left md:text-left">
           <motion.h2
   initial={{ opacity: 0, scale: 0.5 }}
   whileInView={{ opacity: 1, scale: 1 }}
@@ -106,7 +106,7 @@ export default function Contact() {
 
 
           <motion.div
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-3 md:gap-5"
             variants={container}
             initial="hidden"
             whileInView="visible"
@@ -147,7 +147,7 @@ export default function Contact() {
 
         {/* RIGHT COLUMN - FORM */}
         <motion.div
-          className="bg-[#E6E6E6] text-[#12325B] rounded-3xl p-4 md:p-6 shadow-xl flex flex-col w-full max-w-md"
+          className="bg-[#E6E6E6] text-[#12325B] rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-xl flex flex-col w-full max-w-md mx-auto lg:mx-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}

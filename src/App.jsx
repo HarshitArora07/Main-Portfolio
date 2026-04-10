@@ -27,23 +27,23 @@ function App() {
 
       <main>
 <div className="flex flex-col w-full">
-        <section id="home" className="min-h-screen scroll-mt-24">
+        <section id="home" className="min-h-screen scroll-mt-16">
           <Home />
         </section>
 
-        <section id="about" className="min-h-screen scroll-mt-24">
+        <section id="about" className="scroll-mt-16">
           <About />
         </section>
 
-        <section id="skills" className="min-h-screen scroll-mt-24">
+        <section id="skills" className="scroll-mt-16">
           <Skills />
         </section>
 
-         <section id="projects" className="min-h-screen scroll-mt-24">
+         <section id="projects" className="scroll-mt-16">
           <Projects />
         </section>
 
-        <section id="contact" className="min-h-screen scroll-mt-24">
+        <section id="contact" className="scroll-mt-16">
           <Contact />
         </section>
 </div>

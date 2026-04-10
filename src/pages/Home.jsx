@@ -66,7 +66,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="flex flex-col justify-center items-start text-left space-y-2 sm:space-y-3 flex-1 min-w-0">
+          <div className="flex flex-col justify-center items-start text-left space-y-1 sm:space-y-2 md:space-y-3 flex-1 min-w-0">
             <p
               className="text-base sm:text-lg text-[#BFD4E6] font-playfair italic tracking-wide font-bold animate-slideInUp md:-mb-2"
               style={{ animationDelay: "0.2s" }}
@@ -76,7 +76,7 @@ export default function Home() {
 
             {/* NAME - force single line */}
             <h1
-  className="text-[clamp(1.2rem,5vw,3rem)] font-playfair leading-tight text-center md:text-left animate-slideInUp"
+  className="text-[clamp(1.2rem,5vw,3rem)] font-playfair leading-tight text-left animate-slideInUp"
   style={{
     animationDelay: "0.4s",
     color: "#EAF4FF",
@@ -101,7 +101,7 @@ export default function Home() {
 
 
             <p
-              className="text-[#BFD4E6] text-xs sm:text-sm md:text-base leading-relaxed max-w-full md:max-w-[520px] text-justify py-2 sm:py-4 animate-slideInUp"
+              className="text-[#BFD4E6] text-xs sm:text-sm md:text-base leading-relaxed max-w-full md:max-w-[520px] text-justify animate-slideInUp"
               style={{ fontFamily: "DM Sans", animationDelay: "0.8s" }}
             >
               Passionate full-stack web developer with hands-on experience in
@@ -111,7 +111,7 @@ export default function Home() {
 
             {/* BUTTONS */}
             <div
-              className="flex gap-x-2 sm:gap-x-3 md:gap-x-4 mt-2 animate-slideInUp"
+              className="flex gap-x-2 sm:gap-x-3 md:gap-x-4 animate-slideInUp pt-1 sm:pt-2"
               style={{ animationDelay: "1s" }}
             >
               {/* HIRE ME BUTTON */}
@@ -129,7 +129,7 @@ export default function Home() {
   to="contact"
   smooth={true}
   duration={600}
-  offset={-80}
+  offset={-64}
   className="border-2 border-[#3DB4D7] px-3 sm:px-6 md:px-8 py-1.5 sm:py-2.5 tracking-wide hover:bg-[#3DB4D7] hover:text-[#12325B] transition text-xs sm:text-sm md:text-base whitespace-nowrap
              font-Montserrat cursor-pointer
              hover:border-[#eac160] hover:shadow-[0_0_8px_#6b592f,0_0_14px_#6b592f,0_0_20px_#6b592f]"

@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import React from "react";
 import p1 from "../assets/Projects/p1.png";
 import p2 from "../assets/Projects/p2.png";
+import p3 from "../assets/Projects/p3.png";
+import p4 from "../assets/Projects/p4.png";
 
 export default function Projects() {
   const projects = [
@@ -14,6 +16,16 @@ export default function Projects() {
       liveDemo: "#",
       github: "#",
     },
+    
+    {
+      img: p3,
+      title: "Resume Analyzer",
+      description:
+        "AI-powered tool that analyzes resumes, provides feedback, and suggests improvements for better job matching.",
+      techStack: "MERN (MongoDB, Express, React, Node.js) + OpenAI API",
+      liveDemo: "#",
+      github: "#",
+    },
     {
       img: p2,
       title: "AI Document Intelligence Platform",
@@ -23,10 +35,19 @@ export default function Projects() {
       liveDemo: "#",
       github: "#",
     },
+    {
+      img: p4,
+      title: "Study Stack",
+      description:
+        "All-in-one learning platform offering code help, quizzes, and cheat sheets with authentication and mobile-friendly design.",
+      techStack: "React + Tailwind CSS + Node.js + Express + MongoDB",
+      liveDemo: "#",
+      github: "#",
+    },
   ];
 
   return (
-    <section className=" text-[#EAF4FF] py-4 md:py-3 flex flex-col items-center px-4 md:px-10">
+    <section className="text-[#EAF4FF] py-4 md:py-3 flex flex-col items-center px-3 md:px-10">
       {/* ===== Heading ===== */}
       <motion.h2
         className="text-2xl font-orbitron sm:text-3xl md:text-4xl font-bold text-[#47C5E5] mb-2 md:mb-2 text-center"
@@ -40,7 +61,7 @@ export default function Projects() {
 
       {/* ===== Animated Paragraph ===== */}
       <motion.p
-        className="text-justify md:text-center font-montserrat max-w-4xl mb-6 md:mb-4 text-xs sm:text-sm md:text-base px-2"
+        className="text-justify md:text-center font-montserrat max-w-4xl mb-4 md:mb-4 text-xs sm:text-sm md:text-base px-2"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -53,27 +74,15 @@ export default function Projects() {
       </motion.p>
 
       {/* ===== Projects Grid ===== */}
-      <div className="w-full max-w-[900px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
+      <div className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
         {projects.map((project, index) => (
           <motion.div
   key={index}
   className="bg-[#E6E6E6] text-[#12325B] rounded-2xl shadow-md transition-shadow duration-300 overflow-hidden flex flex-col "
-  initial={{
-  opacity: 0,
-  y: 30,
-  x:
-    typeof window !== "undefined" && window.innerWidth >= 768
-      ? index === 0
-        ? -50
-        : index === 1
-        ? 50
-        : 0
-      : 0,
-}}
-
-  whileInView={{ opacity: 1, y: 0, x: 0 }}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
+  transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
   whileHover={{
   y: -10,             // lift up
   scale: 1.05,        // slight zoom
@@ -83,11 +92,11 @@ export default function Projects() {
 >
 
             {/* Image at top */}
-            <div className="w-full flex justify-center">
+            <div className="w-full overflow-hidden border-b border-[#12325B]/10">
               <img
                 src={project.img}
                 alt={`project-${index}`}
-                className="w-full max-h-48 sm:max-h-56 object-contain object-top"
+                className="block w-full h-auto object-contain m-0 p-0"
               />
             </div>
 

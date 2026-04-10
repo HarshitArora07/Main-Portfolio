@@ -62,7 +62,7 @@ export default function Navbar() {
                 to={item.to}
                 smooth={true}
                 duration={600}
-                offset={-80}
+                offset={-64}
                 className="cursor-pointer hover:text-[#47C5E5] transition"
               >
                 {item.name}
@@ -135,7 +135,7 @@ export default function Navbar() {
           to={item.to}
           smooth={true}
           duration={600}
-          offset={-80}
+          offset={-64}
           onClick={() => setIsOpen(false)}
           className="relative font-montserrat text-center text-white text-xl font-semibold 
           tracking-wide cursor-pointer 
