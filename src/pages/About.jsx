@@ -51,19 +51,22 @@ export default function About() {
                 }`}
             >
               I am a passionate and detail-oriented Full-Stack Developer
-              with a strong foundation in modern web technologies including
-              React, JavaScript, Node.js, and MongoDB. I enjoy building scalable,
+              with a strong foundation in modern web technologies including {" "}
+              <span className="text-[#47C5E5]  font-orbitron">React</span>, <span className="text-[#47C5E5] font-orbitron">JavaScript</span>, {""} 
+              <span className="text-[#47C5E5] font-orbitron">Node.js</span>, and <span className="text-[#47C5E5] font-orbitron  ">MongoDB</span>. 
+              I enjoy building scalable,
               responsive, and user-friendly applications that solve real-world problems.
             </p>
           </div>
 
           {/* Desktop Image */}
           <div
-            ref={imageRef}
-            className={`hidden lg:block ml-6 flex-shrink-0 transition-all duration-1000
-              ${animate ? "animate-slideInRight opacity-100" : "opacity-0"}
-            `}
-          >
+  ref={imageRef}
+  className={`hidden lg:block ml-6 flex-shrink-0
+    ${animate ? "animate-floatInOut opacity-100" : "opacity-0"}
+  `}
+>
+
             <img
               src={aboutImg}
               alt="About Me"
@@ -154,6 +157,33 @@ export default function About() {
             0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
           }
+            @keyframes floatInOut {
+  0% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+}
+
+.animate-floatInOut {
+  animation: floatInOut 2.8s ease-in-out infinite;
+}
+
+
             
           .animate-slideUpLine { animation: slideUpLine 0.6s ease-out forwards; }
           .animate-slideInLeft { animation: slideInLeft 1s ease-out forwards; }

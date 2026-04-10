@@ -19,7 +19,7 @@ function App() {
   ></div>
 
   {/* Dark Overlay (controls visibility) */}
-  <div className="absolute inset-0 bg-black/50"></div>
+  <div className="absolute inset-0 bg-black/35"></div>
 
 </div>
 

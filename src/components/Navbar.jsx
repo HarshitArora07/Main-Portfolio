@@ -33,21 +33,24 @@ export default function Navbar() {
       >
         {/* Logo */}
         <h1
-          className={`font-bold tracking-wide transition-all duration-300 ${
-            scrolled ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"
-          }`}
+          className={`font-bold tracking-wide transition-all duration-300
+            text-2xl sm:text-3xl
+            md:${scrolled ? "text-xl" : "text-2xl"}
+            lg:text-2xl xl:text-3xl
+          `}
         >
           PORT<span className="text-[#47C5E5]">FOLIO</span>
         </h1>
 
-        {/* Desktop Menu */}
+        {/* Desktop + Tablet Menu */}
         <ul
           className={`hidden md:flex items-center transition-all duration-300 text-sm lg:text-base tracking-wide ${
             scrolled
-              ? "gap-4 lg:gap-6 xl:gap-8" // reduced gap when scrolled
-              : "gap-6 lg:gap-10 xl:gap-14" // original gap
+              ? "gap-4 md:gap-5 lg:gap-6 xl:gap-8" // reduced gap when scrolled
+              : "gap-6 md:gap-6 lg:gap-10 xl:gap-14" // original gap
           }`}
         >
+
           {menuItems.map((item) => (
             <li
               key={item.name}
@@ -106,31 +109,51 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex justify-center items-start bg-black/40 backdrop-blur-sm">
-          <div className="mt-20 bg-[#12325B]/95 rounded-xl w-11/12 max-w-sm p-6 flex flex-col gap-6 relative">
-            <button
-              className="absolute top-4 right-4 text-white hover:text-[#47C5E5] transition"
-              onClick={() => setIsOpen(false)}
-            >
-              <X size={24} />
-            </button>
+  <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 backdrop-blur-md transition-all duration-300">
+    
+    <div className="relative w-11/12 max-w-sm 
+      bg-gradient-to-br from-[#12325B] to-[#0A1E36] 
+      rounded-2xl p-8 
+      flex flex-col gap-6 
+      shadow-2xl 
+      animate-[fadeIn_0.3s_ease-in-out]">
 
-            {menuItems.map((item) => (
-              <ScrollLink
-                key={item.name}
-                to={item.to}
-                smooth={true}
-                duration={600}
-                offset={-80}
-                className="cursor-pointer text-white text-lg font-medium hover:text-[#47C5E5] transition"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </ScrollLink>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Close Button */}
+      <button
+        className="absolute top-5 right-5 
+        text-white hover:text-[#47C5E5] 
+        transition-transform duration-300 hover:rotate-90"
+        onClick={() => setIsOpen(false)}
+      >
+        <X size={26} />
+      </button>
+
+      {/* Menu Links */}
+      {menuItems.map((item) => (
+        <ScrollLink
+          key={item.name}
+          to={item.to}
+          smooth={true}
+          duration={600}
+          offset={-80}
+          onClick={() => setIsOpen(false)}
+          className="relative font-montserrat text-center text-white text-xl font-semibold 
+          tracking-wide cursor-pointer 
+          transition duration-300 
+          hover:text-[#47C5E5] 
+          before:absolute before:-bottom-1 before:left-0 
+          before:w-0 before:h-[2px] 
+          before:bg-[#47C5E5] 
+          before:transition-all before:duration-300 
+          hover:before:w-full"
+        >
+          {item.name}
+        </ScrollLink>
+      ))}
+    </div>
+  </div>
+)}
+
     </nav>
   );
 }

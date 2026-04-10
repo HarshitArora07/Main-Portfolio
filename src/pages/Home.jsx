@@ -16,6 +16,16 @@ export default function Home() {
   const [speed, setSpeed] = useState(150);
 
   useEffect(() => {
+    const setVh = () => {
+      document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+    };
+    setVh();
+    window.addEventListener("resize", setVh);
+    return () => window.removeEventListener("resize", setVh);
+  }, []);
+
+
+  useEffect(() => {
     const handleType = () => {
       const fullText = titles[titleIndex];
 
@@ -43,7 +53,7 @@ export default function Home() {
     <section className="min-h-screen md:h-screen text-[#EAF4FF] flex items-center relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 w-full">
         {/* MAIN WRAPPER */}
-        <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:grid md:grid-cols-2 md:gap-10 md:items-center">
+        <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:grid md:grid-cols-2 md:gap-10 md:items-center ">
           
           {/* LEFT IMAGE */}
           <div className="flex justify-center items-center flex-shrink-0 animate-zoomIn md:-mr-6 lg:-mr-10">
@@ -139,7 +149,7 @@ export default function Home() {
           className="flex items-center text-center gap-3 sm:gap-6 md:gap-10 flex-nowrap text-[10px] sm:text-sm md:text-base text-[#BFD4E6]"
           style={{ fontFamily: "sans-serif" }}
         >
-          <span>Scalable Apps</span>
+          <span>Extensible Systems</span>
           <span className="text-[#3DB4D7]">|</span>
           <span>Responsive Designs</span>
           <span className="text-[#3DB4D7]">|</span>
