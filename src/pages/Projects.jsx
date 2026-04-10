@@ -13,8 +13,8 @@ export default function Projects() {
       description:
         "Responsive bakery website with modern UI, animations, and online ordering features.",
       techStack: "React • Tailwind • Framer Motion • MongoDB",
-      liveDemo: "#",
-      github: "#",
+      liveDemo: "https://bakemart-paradise.vercel.app/",
+      github: "https://github.com/HarshitArora07/bakemart-paradise.git",
     },
     
     {
@@ -23,8 +23,8 @@ export default function Projects() {
       description:
         "AI-powered tool that analyzes resumes, provides feedback, and suggests improvements for better job matching.",
       techStack: "MERN (MongoDB, Express, React, Node.js) + OpenAI API",
-      liveDemo: "#",
-      github: "#",
+      liveDemo: "https://resume-analyzer-gamma-gilt.vercel.app/",
+      github: "https://github.com/HarshitArora07/ResumeAnalyzer.git",
     },
     {
       img: p2,
@@ -41,8 +41,8 @@ export default function Projects() {
       description:
         "All-in-one learning platform offering code help, quizzes, and cheat sheets with authentication and mobile-friendly design.",
       techStack: "React + Tailwind CSS + Node.js + Express + MongoDB",
-      liveDemo: "#",
-      github: "#",
+      liveDemo: "https://study-stack-one.vercel.app/",
+      github: "https://github.com/HarshitArora07/Study-Stack.git",
     },
   ];
 
