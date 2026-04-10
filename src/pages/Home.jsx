@@ -50,7 +50,10 @@ export default function Home() {
   }, [text, isDeleting, titleIndex, speed, titles]);
 
   return (
-    <section className="min-h-screen md:h-screen text-[#EAF4FF] flex items-center relative overflow-hidden">
+    <section
+      className="md:h-screen text-[#EAF4FF] flex items-center relative overflow-hidden"
+      style={{ minHeight: "calc(var(--vh, 1vh) * 100)" }}
+    >
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 w-full">
         {/* MAIN WRAPPER */}
         <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 md:grid md:grid-cols-2 md:gap-10 md:items-center ">
